@@ -51,20 +51,6 @@ FB.getLoginStatus(function(response) {
         alert('Post ID: ' + response.id);
       }
     });
-
-    /*---                    
-      FB.api('/me/photos', 'post', {
-          name: 'this is a new photo',
-          message: 'this is parse photo',
-          url: "img/overlay.png"
-      }, function (response) {
-          if (!response || response.error) {
-              alert('Error occured:' + response);
-          } else {
-              alert('Post ID: ' + response.id);
-          }
-      });
-    --*/
   
   } else if (response.status === 'not_authorized') {
         alert("not_authorized");
@@ -91,6 +77,7 @@ FB.getLoginStatus(function(response) {
             alertify.alert('An Error has Occurs,Please Reload your Pages');
         }
     });
+  }
  });
 
 
