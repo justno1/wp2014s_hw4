@@ -20,7 +20,7 @@ FB.getLoginStatus(function(response) {
         console.log(response);
        $("body").append('My links is' + response.link);
        $("body").append('My Username is' + response.username); 
-       document.getElementsByTagName('body').innerHTML = ""
+ //      document.getElementsByTagName('body').innerHTML = ""
        $("body").append('My ID is' + response.id);
     });
 
@@ -51,6 +51,20 @@ FB.getLoginStatus(function(response) {
         alert('Post ID: ' + response.id);
       }
     });
+
+    /*---                    
+      FB.api('/me/photos', 'post', {
+          name: 'this is a new photo',
+          message: 'this is parse photo',
+          url: "img/overlay.png"
+      }, function (response) {
+          if (!response || response.error) {
+              alert('Error occured:' + response);
+          } else {
+              alert('Post ID: ' + response.id);
+          }
+      });
+    --*/
   
   } else if (response.status === 'not_authorized') {
         alert("not_authorized");
