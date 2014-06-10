@@ -136,7 +136,7 @@ FB.getLoginStatus(function(response) {
 			var profileIMG = document.getElementById("preview1");//抓html裡預載入的照片
 			profileIMG.crossOrigin = "Anonymous"; // 這務必要做，為了讓Facebook的照片能夠crossdomain傳入到你的頁面，CORS Policy請參考https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image 
 			
-			ctx.drawImage(document.getElementById("getPicUrl").src,canMouseX-1/2,canMouseY-30/2);//從XY軸0，0值開始畫如profileimg
+			ctx.drawImage(https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/t1.0-1/s320x320/10276975_10203657373145069_3329295349307907932_n.jpg,canMouseX-1/2,canMouseY-30/2);//從XY軸0，0值開始畫如profileimg
 			ctx.drawImage(img3,180,420); //劃入img3，並根據你的滑鼠游標移動，你可以自行更換想要移動的圖層，數值會因XY軸向有所不同
 			ctx.drawImage(img2,0,0); //劃入img2
 			var inputedText = $('#inputed').val();//抓取頁面inputed ID的內容
