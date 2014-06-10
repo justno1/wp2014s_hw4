@@ -11,6 +11,7 @@ FB.init({
 
 FB.getLoginStatus(function(response) {
   if (response.status === 'connected') {
+    alert("connected");
   	var uid = response.authResponse.userID;
     var accessToken = response.authResponse.accessToken;
     //呼叫api把圖片放到#preview IMG tag 內
@@ -63,6 +64,7 @@ FB.getLoginStatus(function(response) {
     });
   
   } else if (response.status === 'not_authorized') {
+        alert("not_authorized");
     //要求使用者登入，索取publish_actions權限
     console.log("this user is not authorizied your apps");
     FB.login(function (response) {
@@ -76,6 +78,7 @@ FB.getLoginStatus(function(response) {
 
 	
   } else {
+        alert("just log in!");
     //同樣要求使用者登入
     console.log("Please log in to Facebook first.");
     FB.login(function (response) {
