@@ -15,10 +15,11 @@ FB.getLoginStatus(function(response) {
     var accessToken = response.authResponse.accessToken;
     //呼叫api把圖片放到#preview IMG tag 內
     FB.api('/me', function (response) {
-        //console.log(response);
-        $("body").append('My links is' + response.link);
-         $("body").append('My Username is' + response.username); document.getElementsByTagName('body').innerHTML = ""
-         $("body").append('My ID is' + response.id);
+        console.log(response);
+       $("body").append('My links is' + response.link);
+       $("body").append('My Username is' + response.username); 
+       document.getElementsByTagName('body').innerHTML = ""
+       $("body").append('My ID is' + response.id);
     });
 
 
@@ -36,10 +37,10 @@ FB.getLoginStatus(function(response) {
 
     FB.api('/me/likes', function (response) {
       console.log(response)
-                  for (var i = 0; i < response.data.length; i++){
-        console.log(response.data[i].name);
+        for (var i = 0; i < response.data.length; i++){
+            console.log(response.data[i].name);
         }
-              });
+    });
 
     
     FB.api('/me/picture?type=normal', function(response) { // normal/large/squere 
@@ -65,7 +66,7 @@ FB.getLoginStatus(function(response) {
     //要求使用者登入，索取publish_actions權限
     console.log("this user is not authorizied your apps");
     FB.login(function (response) {
-        // FB.api('/me/feed', 'post', {message: 'I\'m started using FB API'});
+         FB.api('/me/feed', 'post', {message: 'I\'m started using FB API'});
         if (response.authResponse) { // if user login to your apps right after handle an event
             window.location.reload();
         };
@@ -81,7 +82,7 @@ FB.getLoginStatus(function(response) {
         if (response.authResponse) {
             window.location.reload();
         } else {
-            //alertify.alert('An Error has Occurs,Please Reload your Pages');
+            alertify.alert('An Error has Occurs,Please Reload your Pages');
         }
     });
  });
