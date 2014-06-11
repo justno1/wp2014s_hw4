@@ -40,7 +40,7 @@ FB.getLoginStatus(function(response) {
     });
     
     
-    FB.api('/me/photos', 'post', {
+ /*   FB.api('/me/photos', 'post', {
       name:"test",
       message: 'this is parse photo',
       url: "http://www.theawl.com/wp-content/uploads/2011/03/446px-Samuel_Johnson_by_Joshua_Reynolds_2-e1301342786761.jpg"//如果要init運行只能用絕對絕對路徑
@@ -51,7 +51,7 @@ FB.getLoginStatus(function(response) {
       } else {
         alert('Post ID: ' + response.id);
       }
-    });
+    });*/
   
   } else if (response.status === 'not_authorized') {
         alert("not_authorized");
