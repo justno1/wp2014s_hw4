@@ -16,21 +16,21 @@ FB.getLoginStatus(function(response) {
     var accessToken = response.authResponse.accessToken;
 
     //呼叫api把圖片放到#preview IMG tag 內
-    FB.api('/me', function (response) {
+ /*   FB.api('/me', function (response) {
         console.log(response);
        $("body").append('My links is' + response.link);
        $("body").append('My Username is' + response.username); 
- //      document.getElementsByTagName('body').innerHTML = ""
+       document.getElementsByTagName('body').innerHTML = ""
        $("body").append('My ID is' + response.id);
-    });
+    });  */
 
 
-    FB.api('/me/likes', function (response) {
+/*    FB.api('/me/likes', function (response) {
       console.log(response)
         for (var i = 0; i < response.data.length; i++){
             console.log(response.data[i].name);
         }
-    });
+    });*/
 
     
     FB.api('/me/picture?type=large', function(response) { // normal/large/squere 
